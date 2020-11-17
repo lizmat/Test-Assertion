@@ -7,7 +7,7 @@
   ],
   "depends": [
   ],
-  "description": "blah blah blah",
+  "description": "provide 'is test-assertion' trait for older Rakus",
   "license": "Artistic-2.0",
   "name": "Test::Assertion",
   "perl": "6.d",
@@ -16,7 +16,7 @@
   },
   "resources": [
   ],
-  "source-url": "",
+  "source-url": "https://github.com/lizmat/Test-Assertion.git",
   "tags": [
   ],
   "test-depends": [

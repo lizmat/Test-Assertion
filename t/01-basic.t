@@ -12,8 +12,7 @@ my constant $nr-candidates-after = &trait_mod:<is>.candidates.grep( {
       given .signature.params;
 } ).elems;
 
-dd $nr-candidates-before;
-dd $nr-candidates-after;
+BEGIN { say "$nr-candidates-before - $nr-candidates-after"; die }
 
 plan 2;
 

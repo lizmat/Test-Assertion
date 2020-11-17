@@ -22,11 +22,11 @@ foo-test();  # <-- points here if test-assertion *does* work
 DESCRIPTION
 ===========
 
-Test::Assertion is module that will provide the `is test-assertion` trait for subroutines, that was introduced in Rakudo 2020.10, to older versions of Raku. This allows module authors to use the `is test-assertion` trait in a module without having to worry whether the version of Raku actually supports that trait.
+Test::Assertion is a module that provides the `is test-assertion` trait for subroutines, which was introduced in Rakudo 2020.10, to older versions of Raku. This allows module authors to use the `is test-assertion` trait in a module without having to worry whether the version of Raku actually supports that trait.
 
 Module authors should add this module to the "test_depends" section of the META information of a module, as it will (most likely) only be needed during testing.
 
-Please note that this does **not** actually implement the `is test-assertion` logic: it merely makes sure that the use of the trait will not be a compile time error in the test-file where it is being used.
+Please note that this does **not** actually implement the `is test-assertion` error reporting logic: it merely makes sure that the use of the trait will not be a compile time error in the test-file where it is being used.
 
 AUTHOR
 ======

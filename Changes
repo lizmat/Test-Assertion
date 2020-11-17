@@ -2,5 +2,8 @@ Revision history for Test-Assertion
 
 {{$NEXT}}
 
+0.0.2  2020-11-18T00:30:50+01:00
+    - Improve pod a bit
+
 0.0.1  2020-11-17T23:39:09+01:00
     - Initial version

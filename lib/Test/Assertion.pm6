@@ -1,4 +1,4 @@
-module Test::Assertion:ver<0.0.1>:auth<cpan:ELIZABETH> {
+module Test::Assertion:ver<0.0.2>:auth<cpan:ELIZABETH> {
 
     # This is the "is test-assertion" trait as defined in Rakudo
     # 2020.10 and later.  It doesn't do anything else than mix in
@@ -59,8 +59,8 @@ foo-test();  # <-- points here if test-assertion *does* work
 
 =head1 DESCRIPTION
 
-Test::Assertion is module that will provide the C<is test-assertion> trait
-for subroutines, that was introduced in Rakudo 2020.10, to older versions of
+Test::Assertion is a module that provides the C<is test-assertion> trait
+for subroutines, which was introduced in Rakudo 2020.10, to older versions of
 Raku.  This allows module authors to use the C<is test-assertion> trait in
 a module without having to worry whether the version of Raku actually
 supports that trait.
@@ -70,9 +70,9 @@ the META information of a module, as it will (most likely) only be needed
 during testing.
 
 Please note that this does B<not> actually implement the
-C<is test-assertion> logic: it merely makes sure that the use of the
-trait will not be a compile time error in the test-file where it is
-being used.
+C<is test-assertion> error reporting logic: it merely makes sure that the
+use of the trait will not be a compile time error in the test-file where
+it is being used.
 
 =head1 AUTHOR
 

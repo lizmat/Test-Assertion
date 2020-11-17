@@ -1,17 +1,18 @@
 module Test::Assertion:ver<0.0.1>:auth<cpan:ELIZABETH> {
 
-# This is the "is test-assertion" trait as defined in Rakudo
-# 2020.10 and later.  It doesn't do anything else than mix in
-# a method "is-test-assertion", whose *existence* is enough to
-# mark a subroutine as a subroutine doing test assertions.
-# Add this candidate to the :TEST export class, so it doesn't
-# get exported by default.
-multi sub trait_mod:<is>(Routine:D $r, :$test-assertion!) is export(:TEST) {
-    $r.^mixin( role is-test-assertion {
-        method is-test-assertion(--> True) { }
-    }) if $test-assertion;
+    # This is the "is test-assertion" trait as defined in Rakudo
+    # 2020.10 and later.  It doesn't do anything else than mix in
+    # a method "is-test-assertion", whose *existence* is enough to
+    # mark a subroutine as a subroutine doing test assertions.
+    # Add this candidate to the :TEST export class, so it doesn't
+    # get exported by default.
+    multi sub trait_mod:<is>(Routine:D $r, :$test-assertion!) is export(:TEST) {
+        $r.^mixin( role is-test-assertion {
+            method is-test-assertion(--> True) { }
+        }) if $test-assertion;
+    }
 }
-}
+
 # Exporter logic loads whatever this system's Test module brings.
 # If the application of the "test-assertion" trait to a subroutine
 # works, this implies that this version of Test already has the
@@ -27,8 +28,6 @@ sub EXPORT() {
         .[0].type ~~ Routine && .[1].name eq q/$test-assertion/
           given .signature.params;
     } ).elems;
-
-    say "number of candidates = $nr-candidates";
 
     $nr-candidates
       ?? Map.new

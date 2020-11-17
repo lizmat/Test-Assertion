@@ -12,8 +12,6 @@ my constant $nr-candidates-after = &trait_mod:<is>.candidates.grep( {
       given .signature.params;
 } ).elems;
 
-BEGIN { say "$nr-candidates-before - $nr-candidates-after"; die }
-
 plan 2;
 
 sub foo() is test-assertion { }

@@ -19,14 +19,18 @@ multi sub trait_mod:<is>(Routine:D $r, :$test-assertion!) is export(:TEST) {
 # going to export what the "is export" trait put into the
 # EXPORT::TEST namespace (which would be the local copy of
 # the trait_mod).  Since we only need to do this at pre-compilation
-# time, we save the value in a BEGIN value.
+# time, we save the value in a constant.
 sub EXPORT() {
     use Test;
 
-    (BEGIN &trait_mod:<is>.candidates.grep( {
+    my constant $nr-candidates = &trait_mod:<is>.candidates.grep( {
         .[0].type ~~ Routine && .[1].name eq q/$test-assertion/
           given .signature.params;
-    } ).elems)
+    } ).elems;
+
+    say "number of candidates = $nr-candidates";
+
+    $nr-candidates
       ?? Map.new
       !! Map.new( EXPORT::TEST::.head )
 }

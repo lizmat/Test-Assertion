@@ -1,4 +1,4 @@
-module Test::Assertion:ver<0.0.1>:auth<cpan:ELIZABETH> { }
+module Test::Assertion:ver<0.0.1>:auth<cpan:ELIZABETH> {
 
 # This is the "is test-assertion" trait as defined in Rakudo
 # 2020.10 and later.  It doesn't do anything else than mix in
@@ -11,7 +11,7 @@ multi sub trait_mod:<is>(Routine:D $r, :$test-assertion!) is export(:TEST) {
         method is-test-assertion(--> True) { }
     }) if $test-assertion;
 }
-
+}
 # Exporter logic loads whatever this system's Test module brings.
 # If the application of the "test-assertion" trait to a subroutine
 # works, this implies that this version of Test already has the

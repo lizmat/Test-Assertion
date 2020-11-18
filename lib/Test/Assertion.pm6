@@ -1,4 +1,4 @@
-module Test::Assertion:ver<0.0.2>:auth<cpan:ELIZABETH> {
+module Test::Assertion:ver<0.0.3>:auth<cpan:ELIZABETH> {
 
     # This is the "is test-assertion" trait as defined in Rakudo
     # 2020.10 and later.  It doesn't do anything else than mix in
@@ -65,9 +65,14 @@ Raku.  This allows module authors to use the C<is test-assertion> trait in
 a module without having to worry whether the version of Raku actually
 supports that trait.
 
-Module authors should add this module to the "test-depends" section of
-the META information of a module, as it will (most likely) only be needed
-during testing.
+If a distribution does not use any external testing functionality, then
+this module should probably be added as a dependency to the "test-depends"
+section of the META information of a module, as it will (most likely) only
+be needed during testing.
+
+If this module is used by a distribution that is geared towards offering
+additional testing facilities, then clearly this module must be listed in
+the "depends" section.
 
 Please note that this does B<not> actually implement the
 C<is test-assertion> error reporting logic: it merely makes sure that the

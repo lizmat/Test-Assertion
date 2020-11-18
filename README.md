@@ -24,7 +24,9 @@ DESCRIPTION
 
 Test::Assertion is a module that provides the `is test-assertion` trait for subroutines, which was introduced in Rakudo 2020.10, to older versions of Raku. This allows module authors to use the `is test-assertion` trait in a module without having to worry whether the version of Raku actually supports that trait.
 
-Module authors should add this module to the "test_depends" section of the META information of a module, as it will (most likely) only be needed during testing.
+If a distribution does not use any external testing functionality, then this module should probably be added as a dependency to the "test-depends" section of the META information of a module, as it will (most likely) only be needed during testing.
+
+If this module is used by a distribution that is geared towards offering additional testing facilities, then clearly this module must be listed in the "depends" section.
 
 Please note that this does **not** actually implement the `is test-assertion` error reporting logic: it merely makes sure that the use of the trait will not be a compile time error in the test-file where it is being used.
 

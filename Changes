@@ -2,6 +2,10 @@ Revision history for Test-Assertion
 
 {{$NEXT}}
 
+0.0.3  2020-11-18T13:15:36+01:00
+    - Better pod still
+    - Make EXPORT return value a constant as well
+
 0.0.2  2020-11-18T00:30:50+01:00
     - Improve pod a bit
 

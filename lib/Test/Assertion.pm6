@@ -29,7 +29,7 @@ sub EXPORT() {
           given .signature.params;
     } ).elems;
 
-    $nr-candidates
+    BEGIN $nr-candidates
       ?? Map.new
       !! Map.new( EXPORT::TEST::.head )
 }
@@ -65,7 +65,7 @@ Raku.  This allows module authors to use the C<is test-assertion> trait in
 a module without having to worry whether the version of Raku actually
 supports that trait.
 
-Module authors should add this module to the "test_depends" section of
+Module authors should add this module to the "test-depends" section of
 the META information of a module, as it will (most likely) only be needed
 during testing.
 

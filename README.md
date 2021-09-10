@@ -1,3 +1,5 @@
+[![Actions Status](https://github.com/lizmat/Test-Assertion/workflows/test/badge.svg)](https://github.com/lizmat/Test-Assertion/actions)
+
 NAME
 ====
 
@@ -33,14 +35,14 @@ Please note that this does **not** actually implement the `is test-assertion` er
 AUTHOR
 ======
 
-Elizabeth Mattijsen <liz@wenzperl.nl>
+Elizabeth Mattijsen <liz@raku.rocks>
 
 Source can be located at: https://github.com/lizmat/Test-Assertion . Comments and Pull Requests are welcome.
 
 COPYRIGHT AND LICENSE
 =====================
 
-Copyright 2020 Elizabeth Mattijsen
+Copyright 2020, 2021 Elizabeth Mattijsen
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 

@@ -1,4 +1,4 @@
-module Test::Assertion:ver<0.0.3>:auth<cpan:ELIZABETH> {
+module Test::Assertion:ver<0.0.4>:auth<zef:lizmat> {
 
     # This is the "is test-assertion" trait as defined in Rakudo
     # 2020.10 and later.  It doesn't do anything else than mix in
@@ -81,14 +81,14 @@ it is being used.
 
 =head1 AUTHOR
 
-Elizabeth Mattijsen <liz@wenzperl.nl>
+Elizabeth Mattijsen <liz@raku.rocks>
 
 Source can be located at: https://github.com/lizmat/Test-Assertion . Comments and
 Pull Requests are welcome.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2020 Elizabeth Mattijsen
+Copyright 2020, 2021 Elizabeth Mattijsen
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 

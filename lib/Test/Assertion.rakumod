@@ -1,16 +1,13 @@
-module Test::Assertion:ver<0.0.4>:auth<zef:lizmat> {
-
-    # This is the "is test-assertion" trait as defined in Rakudo
-    # 2020.10 and later.  It doesn't do anything else than mix in
-    # a method "is-test-assertion", whose *existence* is enough to
-    # mark a subroutine as a subroutine doing test assertions.
-    # Add this candidate to the :TEST export class, so it doesn't
-    # get exported by default.
-    multi sub trait_mod:<is>(Routine:D $r, :$test-assertion!) is export(:TEST) {
-        $r.^mixin( role is-test-assertion {
-            method is-test-assertion(--> True) { }
-        }) if $test-assertion;
-    }
+# This is the "is test-assertion" trait as defined in Rakudo
+# 2020.10 and later.  It doesn't do anything else than mix in
+# a method "is-test-assertion", whose *existence* is enough to
+# mark a subroutine as a subroutine doing test assertions.
+# Add this candidate to the :TEST export class, so it doesn't
+# get exported by default.
+multi sub trait_mod:<is>(Routine:D $r, :$test-assertion!) is export(:TEST) {
+    $r.^mixin( role is-test-assertion {
+        method is-test-assertion(--> True) { }
+    }) if $test-assertion;
 }
 
 # Exporter logic loads whatever this system's Test module brings.

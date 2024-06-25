@@ -2,6 +2,11 @@ Revision history for Test-Assertion
 
 {{$NEXT}}
 
+0.0.6  2024-06-25T14:06:16+02:00
+    - Modernize test file extension
+    - Add sponsor link and button
+    - Update copyright year
+
 0.0.5  2021-11-07T12:16:56+01:00
     - Remove module statement, we don't need it anymore
 
